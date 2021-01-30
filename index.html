@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farmfood</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./magnific/magnific-popup.css">
+</head>
+<body>
+    <!-- CSS Styles -->
+<style>
+    .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+    .speech input {border: 10; width: 240px; display: inline-block; height: 50px;}
+    .speech img {float: right; width: 40px }
+  </style>
+  
+  <!-- Search Form -->
+  <form id="labnol" method="get" action="https://www.google.com/search">
+    <div class="speech">
+      <input type="text" name="q" id="transcript" placeholder="Say support farmers" />
+      <img onclick="startDictation()" src="v.gif" />
+    </div>
+  </form>
+  
+  <!-- HTML5 Speech Recognition API -->
+  <script>
+    function startDictation() {
+  
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+  
+        var recognition = new webkitSpeechRecognition();
+  
+        recognition.continuous = false;
+        recognition.interimResults = false;
+  
+        recognition.lang = "en-US";
+        recognition.start();
+  
+        recognition.onresult = function(e) {
+          document.getElementById('transcript').value
+                                   = e.results[0][0].transcript;
+          recognition.stop();
+          document.getElementById('labnol').submit();
+        };
+  
+        recognition.onerror = function(e) {
+          recognition.stop();
+        }
+  
+      }
+    }
+  </script>
+    <!--Nav bar-->
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div> 
+    <!--Header===-->
+    <header class="header">
+        <div class="hero">
+            <h1>Farm Food Asia</h1>
+            <a href="#" class="hero-button pulsate">Order and support a Farmer</a>
+  
+    </header>
+    <!--End of Header==================-->
+     <!---=====About Section=====-->
+      <section id="about">
+       <div>
+       <h2 class="title-text">About Us</h2>
+    </div>
+    <div class="about-center">
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-mug-hot"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Organic Drinks</h2>
+                <p class="about-info">what you choose to drink has a direct impact on your health and the health of the environment. When you choose to drink organic beverages, you avoid synthetic pesticides, growth hormones, genetic engineering, and artificial flavors, colors, and perservatives, among other things. You also help to protect natural water supplies, build up soils, and preserve biodiversity!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-mortar-pestle"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Organic Food</h2>
+                <p class="about-info">Organic food, fresh or processed food produced by organic farming methods. Organic food is grown without the use of synthetic chemicals, such as human-made pesticides and fertilizers, and does not contain genetically modified organisms (GMOs). Organic foods include fresh produce, meats, and dairy products as well as processed foods such as crackers, drinks, and frozen meals. </p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-fish"></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Sea Food</h2>
+                <p class="about-info">Seafood is consumed all over the world; it provides the world's prime source of high-quality protein: 14–16% of the animal protein consumed worldwide; over one billion people rely on seafood as their primary source of animal protein.Fish is among the most common food allergens. </p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-pepper-hot "></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Hot & Spicy</h2>
+                <p class="about-info">Spicy food lovers, take note!  Asia’s full of spicy foods, but it’s not a competition. Every country’s got its own take on hot and spicy foods, with so many different delightful ways to burn your face off.</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+            <div class="about-icon"><i class="fas fa-gift "></i></div>
+            <div class="about-text">
+                <h2 class="about-subtitle">Asian Specials</h2>
+                <p class="about-info">Spicy food lovers, take note!  Asia’s full of spicy foods, but it’s not a competition. Every country’s got its own take on hot and spicy foods, with so many different delightful ways to burn your face off.</p>
+            </div>
+        </article>
+        <!--End of single item-->
+    </div>   
+   </section>
+
+   <!--=====End of About Section============-->
+   <!---Menu Section---=========-->
+   <section class="menu" id="menu">
+       <article class="menu-image"></article>
+       <article class="menu-text">
+           <div class="menu-text-center">
+               <h1>Our Menu</h1>
+               <p>1. Asian BBQ Chicken
+
+                Fire up your grill! Marinated in char siu and flavored with honey, spruce up our slightly sweet yet tangy recipe with some fried rice.
+                <br>
+                
+                2. Vietnamese Dumplings
+                
+                steamed dumplings stuffed with minced pork and mushrooms. Team them with spicy chilly garlic sauce and enjoy.
+                <br>
+                3.  Burmese Khao Suey
+
+                Garnish this one-pot meal with fried garlic, onion, peanuts, the works! And with a generous squeeze of lime, you'll have this Burmese delicacy bursting with authentic flavors in no time.
+                <br>
+                4. Grilled Fish with South-East Asian Dressing
+
+Grilled to perfection and made with sesame oil, serve these melt-in-your-mouth fish fillets with a tangy dressing, this fish preparation is every fish lover's delight. 
+<br>
+5. Chilli Chicken
+
+Indo-Chinese and just divine, skip the take-out and savour this boneless chilli chicken in the comfort of your home. Team it with fried rice or just have it stand-alone, this spicy and delectable dish is a show-stealer.  
+       <br>
+      <strong> See more here! </strong>        
+</p>
+                <a href="#">Explore</a>
+           </div>
+       </article>
+   </section>
+   <!---End of Menu Section============-->
+   
+   <!---Farm Support-->
+   <section class="farm-support" id="farm-support">
+    <article class="farm-support-image"></article>
+    <article class="farm-support-text">
+        <div class="farm-support-text-center">
+            <a href="#"><i class="fas fa-seedling"></i></a>
+            <h1>Farm Food supports farmers!</h1>
+            <em><p>Farmers work harder than anyone I’ve ever met. They’re up before the sun and working long after dark. 
+                Farmers care deeply about the food they grow and the animals they raise. They have so much pride in what they do and strive to deliver the very best product they can.
+                Farmers are up against so much every single day, like droughts and floods, insects and blight, trade wars and political fights. And now, they’re facing closed restaurants and schools, two major industries they suppy</p></em>
+            <h2>How does Farm Food support farmers?</h2>
+            <p>1. We signed up for a “share” of what’s produced on the farm each week during the growing season, including vegetables, fruit, and flowers. You pick up your CSA box at the farmer’s market or get home delivery.CSA stands for “community supported agriculture”.  What you get in your CSA box or bag each week depends on what’s ready or ripe on the farm. </p>
+            <br>
+            <p>2. We Shop at the farmers market.
+
+                Communities are taking different approaches with their farmer’s markets. Some may still be holding them, putting social distancing and other measures into place. Some may be switching to pick-up only. Some may postpone or cancel their markets.
+                
+                But if a farmer’s market is still happening in your community, shopping there can help your local farmer tremendously, as it’s a source of income they rely on to keep their operations going.</p>
+            <br>
+            <p>3. Get take-out from Farm Food!(or other restaurants)
+
+                Many local restaurants source ingredients from local farms–but farms can’t keep supplying those ingredients if restaurants go out of business. By getting take-out, you’ll support your local restaurants and support local farmers.</p>
+            <br>
+            <p>4. Waste no food. This was a vital action before the crisis as wasted food means wasted, land, water, and greenhouse gas emissions. We're understanding the vital importance of this in real time! Shop for essentials only.Click below to see some tips here on no waste cooking.</p>
+            <strong>
+                <a href="https://www.theguardian.com/lifeandstyle/2018/may/31/how-have-a-zero-waste-kitchen-tips-from-jamie-oliver-tom-kerridge-skye-gyngell-and-more">TIPS FOR ZERO WASTE COOKING</a>
+                </strong>
+            <br>
+            <p>Here are some useful signposting organisations. Check out the links below!</p>
+
+            <a href="https://www.bigbarn.co.uk/">Big Barn</a>
+            <a href="https://openfoodnetwork.org.uk/">Open Food Network</a>
+            <a href="https://www.neighbourfood.co.uk/">neighbourfood</a>
+            <a href="https://www.kisanmandi.com/">Kisan Mandi</a>
+            <br>
+            <strong>Now you can support farmers too!
+                <br>
+                “The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways.” – John F. Kennedy
+
+            </strong>
+            <img src="images/farmers.jpeg" class="farm-support-image"alt="">
+
+
+
+
+            
+             
+        </div>
+    </article>
+</section>
+
+       
+   </section>
+   <!--End of farm support-->
+   <!--game-->
+   <section id="game">
+    <article class="game">
+        <i class="fas fa-gamepad"></i>
+        <strong><a href="saveTHEplanet/game.html">Save The Planet Game</a></strong>
+       <h2>Play this game till your order gets ready and be the lucky high scorer!
+           <br>
+           You will get to donate $200 to the charity of your choice!
+       </h2>
+     </article>
+     </section>
+   <!----------============Counter / Numbers-===================-->
+      <section id="numbers">
+       <article class="number">
+           <i class="fas fa-cloud-meatball"></i>
+           <p>50</p>
+          <h3> Meat dishes</h3>
+        </article>
+        <article class="number">
+            <i class="fas fa-cheese"></i>
+            <p>35</p>
+           <h3> Cheese Variations</h3>
+         </article>
+         <article class="number">
+            <i class="fas fa-pizza-slice"></i>
+            <p>25</p>
+           <h3> Pizzas</h3>
+         </article>
+         <article class="number">
+            <i class="fas fa-ice-cream"></i>
+            <p>40</p>
+           <h3> Desserts</h3>
+         </article>
+   </section>
+   <!--End of Counter===================-->
+   <!--=======-----------Card Section-----====================-->
+   <section id="food">
+       <div>
+       <h2 class="title-text"> Food Fusion</h2>
+        </div>
+      <div class="food-container">
+              <!--======Card Start ----============-->
+      <article class="food-card">
+              <img src="images/glass.jpeg" class="food-img"alt="">
+              <div class="img-text">
+                  <h1>Breakfast</h1>
+              </div>
+              <div class="img-footer">
+                  <div class="footer-icon">
+                    <i class="fas fa-dollar-sign">25</i>
+                  </div>
+                  <div class="footer-btn">
+                    <button type="button"class="food-btn">Order Now</button>  
+                  </div>
+              </div>
+              </article>
+              <article class="food-card">
+                <img src="images/lunch.png" class="food-img"alt="">
+                <div class="img-text">
+                    <h1>Lunch</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                      <i class="fas fa-dollar-sign">35</i>
+                    </div>
+                    <div class="footer-btn">
+                      <button type="button"class="food-btn">Order Now</button>  
+                    </div>
+                </div>
+                </article>
+                <article class="food-card">
+                    <img src="images/healthy.jpeg" class="food-img"alt="">
+                    <div class="img-text">
+                        <h1>Dinner</h1>
+                    </div>
+                    <div class="img-footer">
+                        <div class="footer-icon">
+                          <i class="fas fa-dollar-sign">45</i>
+                        </div>
+                        <div class="footer-btn">
+                          <button type="button"class="food-btn">Order Now</button>  
+                        </div>
+                    </div>
+                    </article>
+       </div>
+       
+      
+       
+   </section>
+       <!--======End of Card =========-->
+
+     <!--=====End of Card Section=================-->
+       <!--Gallery Section====================-->
+    <section id="gallery">
+        <div>
+        <h2 class="title-text">Main Cuisines</h2>
+     </div>
+     <div id="gallery-center">
+         <article class="gallery-item">
+             <a href="images/as.jpeg">
+                <img src="images/as.jpeg" alt="">
+            </a>
+         </article>
+         <article class="gallery-item">
+            <a href="images/sea.jpeg">
+                <img src="images/sea.jpeg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/asian.jpeg">
+                <img src="images/asian.jpeg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/dreamstime_s_6304106.jpeg">
+                <img src="images/dreamstime_s_6304106.jpeg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/organic.jpeg">
+                <img src="images/organic.jpeg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/background.jpeg">
+                <img src="images/background.jpeg">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/lunch.png">
+                <img src="images/lunch.png" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="images/su.jpeg">
+                <img src="images/su.jpeg" alt="">
+            </a>
+        </article>
+     </div>
+     </section>
+       <!---End of Gallery Section===========-->
+       <!---footer========-->
+       <footer class="footer">
+
+        <div class="section-center">
+            <p class="text">
+                &copy; <span>Farm Food</span> 
+            </p>
+        </div>
+
+       </footer>
+
+       
+  
+     
+   
+
+
+
+     
+
+
+
+
+<script src="onClickMenu.js"></script>
+<!--Magnific POPup Jquery also-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="magnific/jquery.magnific-popup.min.js"></script>
+<script src="magnific/magnific.js"></script>
+</body>
+</html>
